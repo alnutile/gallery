@@ -1,8 +1,8 @@
 created:
     - database/factories/GalleryFactory.php
-    - database/migrations/2024_01_28_023810_create_galleries_table.php
+    - database/migrations/2024_01_28_024515_create_galleries_table.php
     - app/Models/Gallery.php
     - database/seeders/GallerySeeder.php
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
-    Gallery: { title: string, content: longtext, active: boolean, last_ran: datetime }
+    Gallery: { title: string, content: longtext, active: boolean, last_ran: 'datetime nullable' }

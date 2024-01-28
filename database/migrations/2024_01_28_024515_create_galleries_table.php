@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->longText('content');
             $table->boolean('active');
-            $table->dateTime('last_ran');
+            $table->dateTime('last_ran')->nullable();
             $table->timestamps();
         });
     }

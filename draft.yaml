@@ -3,6 +3,6 @@ models:
     title: string
     content: longtext
     active: boolean
-    last_ran: datetime
+    last_ran: datetime nullable
 
 seeders: Gallery
