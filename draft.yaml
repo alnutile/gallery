@@ -1,0 +1,8 @@
+models:
+  Gallery:
+    title: string
+    content: longtext
+    active: boolean
+    last_ran: datetime
+
+seeders: Gallery
