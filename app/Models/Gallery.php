@@ -14,12 +14,7 @@ class Gallery extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'content',
-        'active',
-        'last_ran',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be cast to native types.
@@ -31,4 +26,9 @@ class Gallery extends Model
         'active' => 'boolean',
         'last_ran' => 'datetime',
     ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
 }

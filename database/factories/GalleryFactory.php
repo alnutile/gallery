@@ -25,6 +25,7 @@ class GalleryFactory extends Factory
             'content' => $this->faker->paragraphs(3, true),
             'active' => $this->faker->boolean(),
             'last_ran' => $this->faker->dateTime(),
+            'image_path' => fake()->word()
         ];
     }
 }

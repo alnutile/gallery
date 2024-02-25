@@ -12,6 +12,10 @@ class GallerySeeder extends Seeder
      */
     public function run(): void
     {
-        Gallery::factory()->count(5)->create();
+        Gallery::factory()->create([
+            'title' => 'Folk Art Style',
+            'content' => 'Folk Art style vermont landscape.',
+            'active' => 1
+        ]);
     }
 }
