@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Gallery;
-use Facades\App\OpenAi\GenerateImage as OpenAiGenerateImage;
+use Facades\App\OpenAi\GenerateImage as GenerateImageFacade;
 use Illuminate\Console\Command;
 
 class GenerateImage extends Command
@@ -28,6 +28,6 @@ class GenerateImage extends Command
     public function handle()
     {
         $gallery = Gallery::first();
-        $image = GenerateImage::generate($gallery);
+        $image = GenerateImageFacade::generate($gallery);
     }
 }
