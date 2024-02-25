@@ -29,8 +29,10 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        $generateTimeing = config("gallery.generate");
         return [
             ...parent::share($request),
+            'timing' => $generateTimeing,
             'auth' => [
                 'user' => $request->user(),
             ],
